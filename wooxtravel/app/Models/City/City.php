@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class City extends Model
 {
     use HasFactory;
+    protected $table= "cities";
+
+    protected $fillables=[
+        "name",
+        "population",
+        "price",
+        "num_days",
+        "country_id"
+    ];
+
+    public $timestamps=true;
+
 }

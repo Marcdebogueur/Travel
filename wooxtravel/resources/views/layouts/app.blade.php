@@ -39,24 +39,24 @@
                     <nav class="main-nav">
                         <!-- ***** Logo Start ***** -->
                         <a href="{{ url('/') }}" class="logo">
-                            <img src="assets/images/logo.png" alt="">
+                            <img src="{{asset('assets/images/logo.png')}}" alt="">
                         </a>
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
-                            <li><a href="index.html" class="active">Home</a></li>
-                            <li><a href="about.html">About</a></li>
+                            <li><a href="{{route('home')}}" class="active">Home</a></li>
+                            {{-- <li><a href="{{route('traveling.about')}}">About</a></li> --}}
                             <li><a href="deals.html">Deals</a></li>
 
                             @guest
                                 @if (Route::has('login'))
 
-                                      <li><a href="login.html">Login</a></li>
+                                      <li><a href="{{route('login')}}">Login</a></li>
 
                                 @endif
                                 @if (Route::has('register'))
 
-                                    <li><a href="register.html">Register</a></li>
+                                    <li><a href="{{route('register')}}">Register</a></li>
 
                                 @endif
                             @else
