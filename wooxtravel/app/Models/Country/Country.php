@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Country extends Model
 {
     use HasFactory;
+
+    protected $table ="countries";
+    protected $fillables=[
+        "name",
+        "population",
+        "territory",
+        "avg_price",
+        "description",
+        "inage",
+        "continent"
+    ];
+
+    public $timestamps=true;
 }
